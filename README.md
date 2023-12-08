@@ -1,5 +1,5 @@
 # Taarangana-Event-Page
-Taarangana Events schedule Page
+Taarangana Events schedule Page<br>
 Refer this link for the timeline chart - https://codepen.io/Shalupatel20/pen/ExbZOgQ
 <br>
 for background - https://codepen.io/KilledByAPixel/pen/mdmWaEK
