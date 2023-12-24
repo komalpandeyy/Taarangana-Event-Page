@@ -1,4 +1,25 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Initially hide all events
+    document.querySelectorAll('.timeline__event').forEach(event => {
+        event.classList.add('hidden');
+    });
+});
+
+function showDay(day) {
+    // Hide all events
+    document.querySelectorAll('.timeline__event').forEach(event => {
+        event.classList.add('hidden');
+    });
+
+    // Show events for the selected day
+    document.querySelectorAll(`.timeline__event.${day}`).forEach(event => {
+        event.classList.remove('hidden');
+    });
+}
+
+
+
 'use strict';
 
 // shim creates 2d context
@@ -181,15 +202,15 @@ const gameUpdate=_=> // main game loop
     });
 
     // show title until mouse is moved (not in 1k build)
-    for(i=9; player.y<0 && i--;)
-    {
-        c.font='8em"';c.textAlign='center';c.lineWidth=6;
-        c.strokeStyle=`hsl(${frame+i*29} 100%${50}%`;c.fillStyle=`#000`;
-        let x = WIDTH/2+Math.sin(frame/30+i*Math.PI+i)*i*2;
-        let y = 200+Math.cos(frame/30+i*Math.PI+i*i)*i*2;
-        c.fillText('バタフライコ',x,y);
-        c.strokeText('バタフライコ',x,y);
-    }
+    // for(i=9; player.y<0 && i--;)
+    // {
+    //     c.font='8em"';c.textAlign='center';c.lineWidth=6;
+    //     c.strokeStyle=`hsl(${frame+i*29} 100%${50}%`;c.fillStyle=`#000`;
+    //     let x = WIDTH/2+Math.sin(frame/30+i*Math.PI+i)*i*2;
+    //     let y = 200+Math.cos(frame/30+i*Math.PI+i*i)*i*2;
+    //     c.fillText('バタフライコ',x,y);
+    //     c.strokeText('バタフライコ',x,y);
+    // }
 
     // remove dead or off screen objects
     objects = objects.filter(o=>o.r > 0 & Math.hypot(o.x-WIDTH/2, o.y-HEIGHT) < WIDTH);
@@ -228,4 +249,5 @@ const loop=timeStamp=>
 }
 
 loop(0);
+
 
