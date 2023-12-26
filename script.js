@@ -26,8 +26,8 @@ function showDay(day) {
 const c = a.getContext("2d");
 
 // constants (will be auto replace in minified)
-const WIDTH = 1360;
-const HEIGHT = 720;
+const WIDTH = 1366;
+const HEIGHT = 768;
 
 const TYPE_Explosion        = -1;
 const TYPE_Bullet           = 0;
