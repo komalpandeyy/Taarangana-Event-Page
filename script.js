@@ -26,7 +26,7 @@ function showDay(day) {
 const c = a.getContext("2d");
 
 // constants (will be auto replace in minified)
-const WIDTH = 1280;
+const WIDTH = 1360;
 const HEIGHT = 720;
 
 const TYPE_Explosion        = -1;
@@ -55,7 +55,13 @@ MakeObject =
     v, w,     // velocity
     e,        // team (0==player, 1==enemy)
     h=1,      // hit points
-)=> objects.push({t, x, y, r, v, w, e, h, s:h});
+)=> {
+    if (t >= TYPE_Enemy_Pawn && t <= TYPE_Enemy_Cthulhu && e && e < 2) {
+        // Limit the number of pink enemies (adjust the threshold as needed)
+        if (Rand() < 0.5) {
+            return;
+        }
+    }objects.push({t, x, y, r, v, w, e, h, s:h});};
 
 // init and spawn player
 objects = [];
@@ -69,11 +75,11 @@ let Reset=_=>
     player = objects[frame = globalSeed = wave = spawnCount = enemyCount = 0];
 }
 Reset();
-onkeydown = e=>
-{
-    if (e.keyCode==82)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'r') {
         Reset();
-}
+    }
+});
 
 const gameUpdate=_=> // main game loop
 {
@@ -81,7 +87,7 @@ const gameUpdate=_=> // main game loop
     frame += enemyCount ? 1 : wave;
 
     // player shoot
-    frame%9 || player.r && enemyCount && MakeObject(TYPE_Bullet, player.x, player.y, 19, Math.sin(frame*frame)/3, -9, 0);
+    frame%9 || player.r && enemyCount && MakeObject(TYPE_Bullet, player.x, player.y, 19, Math.sin(frame*frame)/3, -7, 0);
     
     // create sorted list of enemy types for this wave
     seed = wave*wave;                               // set seed
