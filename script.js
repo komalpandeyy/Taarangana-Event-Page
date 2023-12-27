@@ -17,7 +17,13 @@ function showDay(day) {
         event.classList.remove('hidden');
     });
 }
+function showpopup(num) {
+    document.getElementById(`overlay${num}`).style.display="flex";
+}
 
+function closepopup(num) {
+    document.getElementById(`overlay${num}`).style.display="none";
+}
 
 
 'use strict';
