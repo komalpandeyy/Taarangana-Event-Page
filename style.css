@@ -2,11 +2,7 @@
 * {
   box-sizing: border-box;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+
 html {
   font-size: 14px;
 }
@@ -16,10 +12,13 @@ body {
   font-family: "Press Start 2P";
   color: #525f7f;
 }
-
-image{
-	height:20px;
-	width:30px;
+img{
+  /* height:100px; */
+  height: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 	
 }
 canvas {
@@ -191,21 +190,21 @@ h1 {
   z-index: -1;
   left: 50%;
   transform: translateX(-50%);
-  -webkit-animation: fillTop 2s forwards 4s ease-in-out;
-          animation: fillTop 2s forwards 4s ease-in-out;
+  -webkit-animation: fillTop 2s forwards 5s ease-in-out;
+          animation: fillTop 2s forwards 5s ease-in-out;
 }
 .timeline__event__icon:after {
   content: "";
   width: 100%;
-  height: 4px;
+  height: 2px;
   background: #f6a4ec;
   position: absolute;
   left: 0%;
   z-index: -1;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-animation: fillLeftOdd 2s forwards 4s ease-in-out;
-          animation: fillLeftOdd 2s forwards 4s ease-in-out;
+  -webkit-animation: fillLeftOdd 2s forwards 5s ease-in-out;
+          animation: fillLeftOdd 2s forwards 5s ease-in-out;
 }
 .timeline__event__description {
   flex-basis: 100%;
