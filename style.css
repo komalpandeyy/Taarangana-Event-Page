@@ -12,6 +12,12 @@ body {
   font-family: "Press Start 2P";
   color: #525f7f;
 }
+
+image{
+	height:100px;
+	width:100px;
+	
+}
 canvas {
   display: block;
   margin: auto;
