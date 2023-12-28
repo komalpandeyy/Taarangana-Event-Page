@@ -26,6 +26,7 @@ canvas {
   display: block;
   margin: auto;
   background: #111;
+  width:100%;
 }
 #a {
   position: fixed;
@@ -196,7 +197,7 @@ h1 {
 .timeline__event__icon:after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: #f6a4ec;
   position: absolute;
   left: 0%;
