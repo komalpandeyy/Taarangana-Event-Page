@@ -250,7 +250,8 @@ h1 {
 .timeline__event--type3 .timeline__event__title {
   color: #24b47e;
 }
-.timeline__event:last-child .timeline__event__icon:before {
+.timeline__event.lastchild .timeline__event__icon:before
+ {
   content: none;
 }
 
