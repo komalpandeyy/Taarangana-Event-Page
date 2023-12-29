@@ -117,7 +117,7 @@ const gameUpdate=_=> // main game loop
     seed = wave*spawnCount;             // set seed for this enemy spawn
     spawnCount ?                        // if enemies left to spawn
         player.y < 0 ||                 // wait for player to move (not in 1k build)
-        --spawnWait ||                  // and not waiting to spawn
+        (--spawnWait <= 0)&&                // and not waiting to spawn
             MakeObject(                                                                     // spawn enemy
                 i = wave < 10 ? TYPE_Enemy + spawnPool[Rand(wave)|0] : TYPE_Player,         // enemy type
                 Rand(WIDTH,--spawnCount), -72,                                              // x, y pos, decrement spawn count
