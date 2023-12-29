@@ -260,6 +260,28 @@ h1 {
 }
 
 @media (max-width: 786px) {
+	 h2 {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    margin: 2% 5%; /* Adjust margins as needed */
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483B, 0 3px 0 #004639,
+    0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003F32, 0 7px 0 #003D30,
+    0 8px 0 #003A2D, 0 9px 0 #00382B, 0 10px 0 #003528, 0 11px 0 #003225,
+    0 12px 0 #002F22, 0 13px 0 #002B1E, 0 14px 0 #00281C, 0 15px 0 #001F13,
+    0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9),
+    0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9),
+    0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9),
+    0 16px 11px rgba(0, 0, 0, 0.9);
+}
+
+  .timeline__event__title {
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    /* margin-top: 10/%; */
+    margin: 10% 5%; /* Adjust margins as needed */
+  }
   .timeline__event {
     flex-direction: column;
     align-self: center;
