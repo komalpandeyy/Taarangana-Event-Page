@@ -396,7 +396,7 @@ h1 {
   justify-content: center;
 }
 .popup {
-  background:#2667e1;
+  background:#F4C2C2;
   padding: 20px;
   width: 60%;
   height: 70%;
@@ -426,6 +426,7 @@ h1 {
 
 .register:hover {
   transform: scale(1.1);
+  color:#adcb99;
 }
 
 .register:active {
