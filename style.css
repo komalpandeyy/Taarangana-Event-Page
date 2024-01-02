@@ -316,11 +316,19 @@ h1 {
     .popup {
     width: 90%;
     height: 50%;
+    padding: 10px;
   }
 
   .popup h3{
-    font-size: 15px;
+    font-size: 18px;
   }
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 }
 @-webkit-keyframes fillLeft {
   100% {
@@ -457,7 +465,7 @@ h1 {
 
 .register:hover {
   transform: scale(1.1);
-  background-color:#adcb99;
+  background-color:#008080;
 }
 
 .register:active {
